@@ -4,24 +4,126 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:fudwriter"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         mc:Ignorable="d"
-        Title="fudwriter" Height="350" Width="525">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
+        Title="fudwriter" Height="700" Width="1500"
+        MinHeight="700"
+        MinWidth="1500"
+        WindowState="Maximized">
 
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-        </Grid.RowDefinitions>
-        
+
+    <Grid>
+
+        <Menu
+  IsMainMenu="True">
+            <MenuItem
+    Header="_File">
+                <MenuItem Header="New Pen">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="Pen" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator />
+                <MenuItem Header="Open">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="FolderOpenOutline" />
+                    </MenuItem.Icon>
+                    
+                    <MenuItem Header="Pen">
+                        <MenuItem.Icon>
+                            <materialDesign:PackIcon Kind="Pen" />
+                        </MenuItem.Icon>
+
+                    </MenuItem>
+                    
+                    <Separator />
+
+                    <MenuItem Header="Pdf">
+                        <MenuItem.Icon>
+                            <materialDesign:PackIcon Kind="FilePdfBox" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <Separator />
+
+                <MenuItem
+      Header="Save">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon
+          Kind="ContentSave" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem
+      Header="Save As.." />
+
+                <Separator />
+
+                <MenuItem
+      Header="Exit"
+      InputGestureText="Ctrl+E">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon
+          Kind="ExitToApp" />
+                    </MenuItem.Icon>
+                </MenuItem>
+
+            </MenuItem>
+            <MenuItem
+    Header="_Edit">
+                <MenuItem
+      Header="_Cut"
+      Command="Cut">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon
+          Kind="ContentCut" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem
+      Header="_Copy"
+         Command="Copy">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon
+          Kind="ContentCopy" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem
+      Header="_Paste"
+      Command="Paste">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon
+          Kind="ContentPaste" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+
+            <MenuItem Header="_Tools">
+                <MenuItem Header="Customize...">
+
+                </MenuItem>
+                
+                <Separator />
+                
+                <MenuItem Header="Option...">
+                    <MenuItem.Icon>
+                       <materialDesign:PackIcon Kind="GearOutline" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+
+            <MenuItem Header="_Help">
+                <MenuItem Header="About fudwriter">
+                    
+                </MenuItem>
+            </MenuItem>
+
+        </Menu>
+
     </Grid>
 </Window>
