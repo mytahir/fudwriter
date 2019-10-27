@@ -20,12 +20,12 @@ This is a Software which allows Teachers to write on computer screen and also op
   * For queries, help, and general chat go to [Gitter chat room](https://gitter.im/fudfc/fudwriter).
 
 # ![Alt text](web/images/pen24.png "Student's Guidelines") Student's Guidelines
-Are a student like me, want to learn C# (CSharp) and contribute to this project? So Start from here:
-* Learn C# at Microsoft [C# by Microsoft](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/)
-* Learn C# at Tutorialspoint [C# by Tutorialspoint](https://www.tutorialspoint.com/csharp/csharp_environment_setup.htm)
-* Learn C# at W3Schools [C# by W3Schools](https://www.w3schools.com/cs/)
-
-For Contributions, go through [Contribution Guidelines](.github/CONTRIBUTING.md) before making any changes to the repo.
+Are you a student like me, want to learn C# (CSharp) and contribute to this project? So Start from here:
+* Learn C# at [Microsoft](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/)
+* Learn C# at [Tutorialspoint](https://www.tutorialspoint.com/csharp/csharp_environment_setup.htm)
+* Learn C# at [W3Schools](https://www.w3schools.com/cs/)
+* Learn Git & Github at [Github](https://guides.github.com/)
+For Contributions, consider [Contribution Guidelines](.github/CONTRIBUTING.md) before making any changes to the repo.
 
 
 # ![Alt text](web/images/pen24.png "Screenshots") Screenshots!
