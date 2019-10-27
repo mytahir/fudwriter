@@ -2,5 +2,5 @@
 
 This is a Software which allows Teachers to write on computer screen and also open pdfs.
 
-# ![Alt text](web/images/pen64.png "Summary") Summary
+# ![Alt text](web/images/pen32.png "Summary") Summary
 
