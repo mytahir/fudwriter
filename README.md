@@ -24,7 +24,7 @@ This is a Software which allows Teachers to write on computer screen and also op
 Are you a student like me, want to learn C# (CSharp) and contribute to this project? So Start from here:
 * Learn C# at [Microsoft](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/)
 * Learn Git & Github at [Github](https://guides.github.com/)
-* But Read Less Code More!
+* Read Less Code More!
 
 For Contributions, consider [Contribution Guidelines](.github/CONTRIBUTING.md) before making any changes to the repo.
 
