@@ -25,7 +25,7 @@ Are you a student like me, want to learn C# (CSharp) and contribute to this proj
 * Learn C# at [Microsoft](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/)
 * Learn Git & Github at [Github](https://guides.github.com/)
 * Read Less Code More!
-* Let's Chat and Share Ideas at [Gitter](https://guides.github.com/)
+* Let's Chat and Share Ideas at [Gitter](https://gitter.im/fudfc/fudwriter)
 
 For Contributions, consider [Contribution Guidelines](.github/CONTRIBUTING.md) before making any changes to the repo.
 
