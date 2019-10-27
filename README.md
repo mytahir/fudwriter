@@ -3,7 +3,7 @@
 This is a Software which allows Teachers to write on computer screen and also open pdfs.
 
 # ![Alt text](web/images/pen24.png "Summary") Summary
-* Clean Interface with MDIX (MateriaDesignInXaml) which allows [Google Material Design Approach](https://material.io/design/) on Windows Machines
+* Clean Interface with MDIX Library which allows [Google Material Design](https://material.io/design/) on Windows Machines
 * It allows user to write on the Screen
 * It also opens .pdf file format
 
