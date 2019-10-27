@@ -23,9 +23,8 @@ This is a Software which allows Teachers to write on computer screen and also op
 # ![Alt text](web/images/pen24.png "Student's Guidelines") Student's Guidelines
 Are you a student like me, want to learn C# (CSharp) and contribute to this project? So Start from here:
 * Learn C# at [Microsoft](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/)
-* Learn C# at [Tutorialspoint](https://www.tutorialspoint.com/csharp/csharp_environment_setup.htm)
-* Learn C# at [W3Schools](https://www.w3schools.com/cs/)
 * Learn Git & Github at [Github](https://guides.github.com/)
+* But Read Less Code More!
 
 For Contributions, consider [Contribution Guidelines](.github/CONTRIBUTING.md) before making any changes to the repo.
 
