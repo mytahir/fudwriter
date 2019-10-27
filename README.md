@@ -18,3 +18,14 @@ This is a Software which allows Teachers to write on computer screen and also op
 * Before contributing code read the [Contribution Guidelines](.github/CONTRIBUTING.md)
   * GitHub issues are for bugs.
   * For queries, help, and general chat go to [Gitter chat room](https://gitter.im/fudfc/fudwriter).
+
+# ![Alt text](web/images/pen24.png "Student's Guidelines") Student's Guidelines
+Are a student like me, want to learn C# (CSharp) and contribute to this project? So Start from here:
+* Lean C# by Microsoft [C# by Microsoft](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/)
+* Lean C# by Tutorialspoint [C# by Tutorialspoint](https://www.tutorialspoint.com/csharp/csharp_environment_setup.htm)
+* Lean C# by W3Schools [C# by W3Schools](https://www.w3schools.com/cs/)
+
+# Foe Contributions, go through [Contribution Guidelines](.github/CONTRIBUTING.md) before making any changes to the repo.
+
+
+# ![Alt text](web/images/pen24.png "Screenshots") Screenshots!
