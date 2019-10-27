@@ -13,7 +13,7 @@ This is a Software which allows Teachers to write on computer screen and also op
 # ![Alt text](web/images/pen24.png "How To Install!") How To Install The Software
 * You should install [.netframework 4.5.2 or later](https://dotnet.microsoft.com/download/dotnet-framework) before installing [fudwriter](https://github.com/mustaphayusuf/fudwriter/releases)
 
-# ![Alt text](web/images/MD4XAML28.png "Contributions") Contribution Guidelines
+# ![Alt text](web/images/pen24.png "Contributions") Contribution Guidelines
 
 * Before contributing code read the [Contribution Guidelines](.github/CONTRIBUTING.md)
   * GitHub issues are for bugs.
