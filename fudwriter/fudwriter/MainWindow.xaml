@@ -13,16 +13,32 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         mc:Ignorable="d"
-        Title="fudwriter" Height="700" Width="1500"
-        MinHeight="700"
-        MinWidth="1500"
-        WindowState="Maximized">
+        Title="fudwriter" 
+        WindowState="Maximized"
+        WindowStartupLocation="CenterScreen">
 
 
     <Grid>
 
-        <Menu
-  IsMainMenu="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <materialDesign:ColorZone Mode="PrimaryDark" materialDesign:ShadowAssist.ShadowDepth="Depth4" Grid.Column="0" Grid.ColumnSpan="5">
+
+            <Menu >
             <MenuItem
     Header="_File">
                 <MenuItem Header="New Pen">
@@ -35,14 +51,14 @@
                     <MenuItem.Icon>
                         <materialDesign:PackIcon Kind="FolderOpenOutline" />
                     </MenuItem.Icon>
-                    
+
                     <MenuItem Header="Pen">
                         <MenuItem.Icon>
                             <materialDesign:PackIcon Kind="Pen" />
                         </MenuItem.Icon>
 
                     </MenuItem>
-                    
+
                     <Separator />
 
                     <MenuItem Header="Pdf">
@@ -107,23 +123,25 @@
                 <MenuItem Header="Customize...">
 
                 </MenuItem>
-                
+
                 <Separator />
-                
+
                 <MenuItem Header="Option...">
                     <MenuItem.Icon>
-                       <materialDesign:PackIcon Kind="GearOutline" />
+                        <materialDesign:PackIcon Kind="GearOutline" />
                     </MenuItem.Icon>
                 </MenuItem>
             </MenuItem>
 
             <MenuItem Header="_Help">
                 <MenuItem Header="About fudwriter">
-                    
+
                 </MenuItem>
             </MenuItem>
 
         </Menu>
+
+        </materialDesign:ColorZone>
 
     </Grid>
 </Window>
