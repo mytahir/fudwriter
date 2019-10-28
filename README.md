@@ -17,12 +17,15 @@ This is a Software which allows Teachers to write on computer screen and also op
 
 * .NetFramework 4.5.2, Visual Studio 2015 or later are required
 * Before contributing code read the [Contribution Guidelines](.github/CONTRIBUTING.md)
-  * GitHub issues are for bugs.
+  * GitHub issues are for bugs and new feature request.
   * For queries, help, and general chat go to [Gitter chat room](https://gitter.im/fudfc/fudwriter).
 
 # ![Alt text](web/images/pen24.png "Student's Guidelines") Student's Guidelines
 Are you a student like me, want to learn C# (CSharp) and contribute to this project? So Start from here:
 * Learn C# at [Microsoft](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/)
+* Learn Wpf at [Wpf-Tutorial](https://wpf-tutorial.com/)
+* Learn Xaml at [Tutorialspoint](https://www.tutorialspoint.com/xaml/index.htm)
+* Learn MDIX at [Intellitect](https://intellitect.com/getting-started-material-design-in-xaml/)
 * Learn Git & Github at [Github](https://guides.github.com/)
 * Let's Chat and Share Ideas at [Gitter](https://gitter.im/fudfc/fudwriter)
 * Read Less Code More!
