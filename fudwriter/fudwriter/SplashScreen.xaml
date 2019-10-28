@@ -1,0 +1,30 @@
+﻿<Window x:Class="fudwriter.SplashScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:fudwriter"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="SplashScreen" Height="400" Width="600"
+        ResizeMode="NoResize" WindowStyle="None" 
+         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen" 
+        BorderThickness="1" 
+        BorderBrush="blue">
+    <Grid>
+        <TextBlock Text="FudWriter" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" />
+        
+        <TextBlock Text="Please Wait....." HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 0 4"/>
+
+        <ProgressBar
+  IsIndeterminate="True" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>
