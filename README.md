@@ -4,7 +4,6 @@ This is a Software which allows Teachers to write on computer screen and also op
 
 # ![Alt text](web/images/pen24.png "Summary") Summary
 # ![Alt text](web/images/Screenshot1.png "Splash Screen")
-# ![Alt text](web/images/Screenshot2.png "Menus")
 
 * It allows user to write on the Screen
 * It also opens .pdf file format
