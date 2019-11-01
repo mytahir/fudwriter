@@ -24,5 +24,12 @@ namespace fudwriter
         {
             InitializeComponent();
         }
+
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            DialogHost.IsOpen = true;
+
+        }
     }
 }

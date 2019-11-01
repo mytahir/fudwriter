@@ -23,5 +23,11 @@ namespace fudwriter
         {
             InitializeComponent();
         }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+
+        }
     }
 }
