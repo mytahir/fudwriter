@@ -41,6 +41,6 @@ For Contributions, consider [Contribution Guidelines](.github/CONTRIBUTING.md) b
 
 # ![Alt text](web/images/pen24.png "Screenshots") Screenshots!
 # ![Alt text](web/images/Screenshot1.png "Splash Screen")
-# ![Alt text](web/images/Screenshot003.png "Option Dialog")
+# ![Alt text](web/images/Screenshot0003.png "Option Dialog")
 # ![Alt text](web/images/Screenshot2.png "Menus")
 # ![Alt text](web/images/Screenshot3.png "Menus")
