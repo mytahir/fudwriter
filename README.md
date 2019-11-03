@@ -7,14 +7,14 @@ This is a Software which allows Teachers to write on computer screen and also op
 
 * It allows user to write on the Screen
 * It also opens .pdf file format
-* Clean Interface with MDIX Library which allows [Google Material Design](https://material.io/design/) on Windows Machines
+* Clean Interface with MDIX Library which enables [Google Material Design](https://material.io/design/) on Windows Machines
 
 [![Gitter](https://img.shields.io/badge/Gitter-Join%20Chat,%20Help,%20Say%20Hello!-green.svg?logo=gitter&style=flat-square)](https://gitter.im/fudfc/fudwriter)
 [![MDIX](https://img.shields.io/badge/Library-Material%20Design%20in%20Xaml-informational)](http://materialdesigninxaml.net/)
 [![GitHub issues](https://img.shields.io/github/issues/mustaphayusuf/fudwriter)](https://github.com/mustaphayusuf/fudwriter/issues)
 
 # ![Alt text](web/images/pen24.png "How To Install!") Icon
-This is not the initial icon of the Software, it might be changed anytime
+This is not a standard icon of the Software, it might be changed anytime
 
 # ![Alt text](web/images/pen24.png "How To Install!") How To Install The Software
 * You should install [.netframework 4.5.2 or later](https://dotnet.microsoft.com/download/dotnet-framework) before installing [fudwriter](https://github.com/mustaphayusuf/fudwriter/releases)
