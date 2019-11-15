@@ -20,47 +20,75 @@
     <materialDesign:DialogHost x:Name="DialogHost">
 
         <materialDesign:DialogHost.DialogContent>
-            <Grid>
-                <TextBlock HorizontalAlignment="Center" FontSize="20" Margin="20">
+            <StackPanel Orientation="Vertical">
+                <TextBlock HorizontalAlignment="Center" FontSize="20" Margin="20 5 20 0">
                     Select Option
                 </TextBlock>
 
-                <StackPanel Orientation="Horizontal">
-                    <StackPanel Orientation="Vertical" Margin="40 70 40 5">
+                <StackPanel Orientation="Horizontal" Margin="60 -10 60 0">
 
+                    <Grid Margin="0 0 25 0">
+                        <Button
+                               Style="{StaticResource MaterialDesignRaisedButton}"
+                               materialDesign:ButtonProgressAssist.Value="-1"
+                               materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+                               materialDesign:ButtonProgressAssist.IsIndeterminate="True" Width="50" Height="40">
+                            <materialDesign:PackIcon Kind="Pen" Width="20" Height="20" />
+
+                        </Button>
+
+                        <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 75 0 0" FontSize="12" Text="New Pen" />
+
+                    </Grid>
+
+                    <Grid Margin="25 0 0 0">
                         <Button
     Style="{StaticResource MaterialDesignRaisedButton}"
     materialDesign:ButtonProgressAssist.Value="-1"
     materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
-    materialDesign:ButtonProgressAssist.IsIndeterminate="True" Width="60" Height="40" Margin="10">
-                            <materialDesign:PackIcon Kind="Pen" Width="20" Height="20" />
-
-                        </Button>
-                        <TextBlock HorizontalAlignment="Center" FontSize="15">
-                            New Pen
-                        </TextBlock>
-                    </StackPanel>
-
-                    <StackPanel Orientation="Vertical" Margin="5 70 40 40">
-
-                        <Button
-    Style="{StaticResource MaterialDesignRaisedButton}"
-    materialDesign:ButtonProgressAssist.Value="-4"
-    materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
-    materialDesign:ButtonProgressAssist.IsIndeterminate="True" Width="60" Height="40" Margin="10">
+    materialDesign:ButtonProgressAssist.IsIndeterminate="True" Width="50" Height="40">
 
                             <materialDesign:PackIcon Kind="FolderOpen" Width="20" Height="20" />
 
                         </Button>
-                        <TextBlock HorizontalAlignment="Center" FontSize="15">
-                            Open Eixting
-                        </TextBlock>
-                    </StackPanel>
+                        <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 75 0 0" FontSize="12" Text="Open Pen" />
 
-
+                    </Grid>
                 </StackPanel>
 
-            </Grid>
+
+                <StackPanel Orientation="Horizontal" Margin="60 0 60 10">
+
+                    <Grid Margin="0 0 25 0">
+                        <Button
+                               Style="{StaticResource MaterialDesignRaisedButton}"
+                               materialDesign:ButtonProgressAssist.Value="-1"
+                               materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+                               materialDesign:ButtonProgressAssist.IsIndeterminate="True" Width="50" Height="40">
+                            <materialDesign:PackIcon Kind="FilePdfBox" Width="20" Height="20" />
+
+                        </Button>
+
+                        <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 75 0 0" FontSize="12" Text="Open PDF" />
+
+                    </Grid>
+
+                    <Grid Margin="25 0 0 0">
+                        <Button
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    materialDesign:ButtonProgressAssist.Value="-1"
+    materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+    materialDesign:ButtonProgressAssist.IsIndeterminate="True" Width="50" Height="40">
+
+                            <materialDesign:PackIcon Kind="ExitToApp" Width="20" Height="20" />
+
+                        </Button>
+                        <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 75 0 0" FontSize="12" Text="Exit" />
+
+                    </Grid>
+                </StackPanel>
+
+            </StackPanel>
         </materialDesign:DialogHost.DialogContent>
         <Grid>
 
