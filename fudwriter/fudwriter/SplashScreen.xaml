@@ -18,10 +18,25 @@
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen" 
         BorderThickness="1" 
-        BorderBrush="blue">
-    <Grid MouseDown="Grid_MouseDown">
-        <materialDesign:PackIcon Kind="WindowClose" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0" />
-        <materialDesign:PackIcon Kind="WindowMinimize" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 0 20 0" />
+        BorderBrush="blue"
+        MouseDown="Window_MouseDown">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Button Click="Button_Click" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0">
+            <materialDesign:PackIcon Kind="WindowClose" />
+        </Button>
+
+        <Button Click="Button_Click_1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 0 20 0">
+              <materialDesign:PackIcon Kind="WindowMinimize" />
+        </Button>
+        
         <TextBlock Text="FudWriter" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40"/>
         
         <TextBlock Text="Please Wait....." HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 0 4"/>
