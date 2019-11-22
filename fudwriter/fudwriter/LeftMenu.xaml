@@ -1,0 +1,86 @@
+﻿<UserControl x:Class="fudwriter.LeftMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:fudwriter"
+             mc:Ignorable="d" 
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             d:DesignHeight="500" d:DesignWidth="400"
+             >
+
+    <Grid>
+        <Grid.Effect>
+            <DropShadowEffect 
+                ShadowDepth="5"
+                Color="Maroon"
+                Opacity="0.40"
+                BlurRadius="0.5"/>
+        </Grid.Effect>
+        
+        <materialDesign:TransitioningContent x:Name="TransitioningLeftSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.1}">
+                <Grid Background="WhiteSmoke" >
+                <Border BorderBrush="Blue" BorderThickness=".5" />
+             
+                <StackPanel Orientation="Horizontal" Margin="0 1 0 1">
+                    
+                    <Grid Background="White">
+                        <Border BorderBrush="Gray" BorderThickness="0.5" />
+                        <StackPanel Width="300">
+                    <MenuItem Uid="0"  Header="New Pen" Margin="0 20 0 0">
+                            <MenuItem.Icon>
+                                <materialDesign:PackIcon Kind="Pen" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <Separator />
+                        <MenuItem  Header="Open">
+                            <MenuItem.Icon>
+                                <materialDesign:PackIcon Kind="FolderOpenOutline" />
+                            </MenuItem.Icon>
+                            <MenuItem Header="Pen">
+                                <MenuItem.Icon>
+                                    <materialDesign:PackIcon Kind="Pen" />
+                                </MenuItem.Icon>
+
+                            </MenuItem>
+
+                            <Separator />
+
+                            <MenuItem Header="Pdf">
+                                <MenuItem.Icon>
+                                    <materialDesign:PackIcon Kind="FilePdfBox" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+                        </MenuItem>
+
+                        <Separator />
+
+                        <MenuItem Uid="2"  Header="Save">
+                            <MenuItem.Icon>
+                                <materialDesign:PackIcon
+          Kind="ContentSave" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Uid="3"  Header="Save As.." />
+
+                        <Separator />
+
+                        <MenuItem Uid="4"
+      Header="Exit"
+      InputGestureText="Ctrl + E">
+                            <MenuItem.Icon>
+                                <materialDesign:PackIcon
+          Kind="ExitToApp" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        </StackPanel>
+                    </Grid>
+                    <Grid HorizontalAlignment="Left">
+                        <TextBlock Text="ugfghfjhgfhg" />
+                    </Grid>
+                </StackPanel>
+                </Grid>
+            </materialDesign:TransitioningContent>
+        </Grid>
+</UserControl>
