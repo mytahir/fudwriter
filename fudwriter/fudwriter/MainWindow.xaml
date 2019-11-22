@@ -10,219 +10,68 @@
         TextElement.FontSize="13"
         TextOptions.TextFormattingMode="Ideal"
         TextOptions.TextRenderingMode="Auto"
-        Background="{DynamicResource MaterialDesignPaper}"
+        Background="White"
         FontFamily="{DynamicResource MaterialDesignFont}"
         mc:Ignorable="d"
         Title="fudwriter" 
         WindowState="Maximized"
-        WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
-
-    <materialDesign:DialogHost x:Name="DialogHost">
-
-        <materialDesign:DialogHost.DialogContent>
-            <StackPanel Orientation="Vertical">
-                <TextBlock HorizontalAlignment="Center" FontSize="20" Margin="20 5 20 0">
-                    Select Option
-                </TextBlock>
-
-                <StackPanel Orientation="Horizontal" Margin="60 -10 60 0">
-
-                    <Grid Margin="0 0 25 0">
-                        <Button
-                               Style="{StaticResource MaterialDesignRaisedButton}"
-                               materialDesign:ButtonProgressAssist.Value="-1"
-                               materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
-                               materialDesign:ButtonProgressAssist.IsIndeterminate="True" Width="50" Height="40">
-                            <materialDesign:PackIcon Kind="Pen" Width="20" Height="20" />
-
-                        </Button>
-
-                        <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 75 0 0" FontSize="12" Text="New Pen" />
-
-                    </Grid>
-
-                    <Grid Margin="25 0 0 0">
-                        <Button
-    Style="{StaticResource MaterialDesignRaisedButton}"
-    materialDesign:ButtonProgressAssist.Value="-1"
-    materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
-    materialDesign:ButtonProgressAssist.IsIndeterminate="True" Width="50" Height="40">
-
-                            <materialDesign:PackIcon Kind="FolderOpen" Width="20" Height="20" />
-
-                        </Button>
-                        <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 75 0 0" FontSize="12" Text="Open Pen" />
-
-                    </Grid>
-                </StackPanel>
-
-
-                <StackPanel Orientation="Horizontal" Margin="60 0 60 10">
-
-                    <Grid Margin="0 0 25 0">
-                        <Button
-                               Style="{StaticResource MaterialDesignRaisedButton}"
-                               materialDesign:ButtonProgressAssist.Value="-1"
-                               materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
-                               materialDesign:ButtonProgressAssist.IsIndeterminate="True" Width="50" Height="40">
-                            <materialDesign:PackIcon Kind="FilePdfBox" Width="20" Height="20" />
-
-                        </Button>
-
-                        <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 75 0 0" FontSize="12" Text="Open PDF" />
-
-                    </Grid>
-
-                    <Grid Margin="25 0 0 0">
-                        <Button
-    Style="{StaticResource MaterialDesignRaisedButton}"
-    materialDesign:ButtonProgressAssist.Value="-1"
-    materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
-    materialDesign:ButtonProgressAssist.IsIndeterminate="True" Width="50" Height="40">
-
-                            <materialDesign:PackIcon Kind="ExitToApp" Width="20" Height="20" />
-
-                        </Button>
-                        <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 75 0 0" FontSize="12" Text="Exit" />
-
-                    </Grid>
-                </StackPanel>
-
-            </StackPanel>
-        </materialDesign:DialogHost.DialogContent>
-        <Grid>
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="76*" />
-                <ColumnDefinition Width="76*" />
-                <ColumnDefinition Width="76*" />
-                <ColumnDefinition Width="65*" />
-                <ColumnDefinition Width="11*"/>
-                <ColumnDefinition Width="76*" />
-            </Grid.ColumnDefinitions>
-
-            <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-            </Grid.RowDefinitions>
+        WindowStartupLocation="CenterScreen"
+        >
 
 
 
-            <materialDesign:ColorZone Mode="PrimaryDark" materialDesign:ShadowAssist.ShadowDepth="Depth4" Grid.Column="0" Grid.ColumnSpan="6">
+    <Grid>
 
-                <Menu>
-                    <MenuItem
-    Header="_File">
-                        <MenuItem Header="New Pen">
-                            <MenuItem.Icon>
-                                <materialDesign:PackIcon Kind="Pen" />
-                            </MenuItem.Icon>
-                        </MenuItem>
-                        <Separator />
-                        <MenuItem Header="Open">
-                            <MenuItem.Icon>
-                                <materialDesign:PackIcon Kind="FolderOpenOutline" />
-                            </MenuItem.Icon>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
 
-                            <MenuItem Header="Pen">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="Pen" />
-                                </MenuItem.Icon>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
 
-                            </MenuItem>
+        <materialDesign:ColorZone Mode="PrimaryDark" materialDesign:ShadowAssist.ShadowDepth="Depth1" Grid.Column="0" Grid.ColumnSpan="6" Padding="0 -10 0 -10">
 
-                            <Separator />
+            <Menu>
+                <MenuItem
+                    Uid="0" Click="FileTab_Click"
+                    Header="_File" Background="Blue" Foreground="White">
+                </MenuItem>
+                <MenuItem Uid="1" Click="FileTab_Click"
+    Header="_Home">
+                </MenuItem>
 
-                            <MenuItem Header="Pdf">
-                                <MenuItem.Icon>
-                                    <materialDesign:PackIcon Kind="FilePdfBox" />
-                                </MenuItem.Icon>
-                            </MenuItem>
-                        </MenuItem>
-                        <Separator />
+                <MenuItem Header="_Tools" Uid="2" Click="FileTab_Click">
 
-                        <MenuItem
-      Header="Save">
-                            <MenuItem.Icon>
-                                <materialDesign:PackIcon
-          Kind="ContentSave" />
-                            </MenuItem.Icon>
-                        </MenuItem>
-                        <MenuItem
-      Header="Save As.." />
+                </MenuItem>
 
-                        <Separator />
-
-                        <MenuItem
-      Header="Exit"
-      InputGestureText="Ctrl+E">
-                            <MenuItem.Icon>
-                                <materialDesign:PackIcon
-          Kind="ExitToApp" />
-                            </MenuItem.Icon>
-                        </MenuItem>
+                <MenuItem Header="_Help">
+                    <MenuItem Header="About fudwriter">
 
                     </MenuItem>
-                    <MenuItem
-    Header="_Edit">
-                        <MenuItem
-      Header="_Cut"
-      Command="Cut">
-                            <MenuItem.Icon>
-                                <materialDesign:PackIcon
-          Kind="ContentCut" />
-                            </MenuItem.Icon>
-                        </MenuItem>
-                        <MenuItem
-      Header="_Copy"
-         Command="Copy">
-                            <MenuItem.Icon>
-                                <materialDesign:PackIcon
-          Kind="ContentCopy" />
-                            </MenuItem.Icon>
-                        </MenuItem>
-                        <MenuItem
-      Header="_Paste"
-      Command="Paste">
-                            <MenuItem.Icon>
-                                <materialDesign:PackIcon
-          Kind="ContentPaste" />
-                            </MenuItem.Icon>
-                        </MenuItem>
-                    </MenuItem>
+                </MenuItem>
 
-                    <MenuItem Header="_Tools">
-                        <MenuItem Header="Customize...">
+            </Menu>
 
-                        </MenuItem>
+        </materialDesign:ColorZone>
 
-                        <Separator />
+        <Grid  x:Name="Container" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Grid.ColumnSpan="3" Margin="0 28 0 0"/>
+        <Grid  x:Name="Container2" Grid.Column="0" Grid.Row="0" Grid.RowSpan="1" Grid.ColumnSpan="6" Margin="0 30 0 0"/>
 
-                        <MenuItem Header="Option...">
-                            <MenuItem.Icon>
-                                <materialDesign:PackIcon Kind="GearOutline" />
-                            </MenuItem.Icon>
-                        </MenuItem>
-                    </MenuItem>
-
-                    <MenuItem Header="_Help">
-                        <MenuItem Header="About fudwriter">
-
-                        </MenuItem>
-                    </MenuItem>
-
-                </Menu>
-
-            </materialDesign:ColorZone>
-
-            <Grid Grid.Row="4" Grid.ColumnSpan="6" Height="30" VerticalAlignment="Bottom" Background="BlueViolet">
-                <TextBlock Text="Pens :" VerticalAlignment="Center" Foreground="White" Margin="10 0 0 0"/>
-                <TextBlock Text="Pdfs :" VerticalAlignment="Center" Foreground="White" Margin="90 0 0 0"/>
-            </Grid>
+        <Grid Grid.Row="4" Grid.ColumnSpan="6" Height="30" VerticalAlignment="Bottom" Background="LimeGreen">
+            <TextBlock Text="Pens :" VerticalAlignment="Center" Foreground="White" Margin="10 0 0 0"/>
+            <TextBlock Text="Pdfs :" VerticalAlignment="Center" Foreground="White" Margin="90 0 0 0"/>
         </Grid>
+        <TextBlock FontSize="20" FontWeight="Bold" x:Name="textBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="116,47,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+    </Grid>
 
-    </materialDesign:DialogHost>
 </Window>
