@@ -33,7 +33,6 @@ namespace fudwriter
                     if (StateOpen)
                     {
                         Container.Children.Clear();
-                        Container2.Children.Clear();
                         Container.Children.Add(new LeftMenu());
                     }
                     else
@@ -47,11 +46,13 @@ namespace fudwriter
                     if (StateOpen)
                     {
                         Container.Children.Clear();
+                        home.Background = new SolidColorBrush(Colors.LightGray);
                         Container2.Children.Add(new UpperMenu());
                     }
                     else
                     {
                         Container2.Children.Clear();
+                        home.Background = new SolidColorBrush(Colors.WhiteSmoke);
                     }
                     StateOpen = !StateOpen;
                     break;

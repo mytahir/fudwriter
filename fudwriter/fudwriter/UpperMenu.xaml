@@ -5,18 +5,30 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:fudwriter"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             FontFamily="{DynamicResource MaterialDesignFont}"
              mc:Ignorable="d" 
-             d:DesignHeight="200" d:DesignWidth="500">
+             d:DesignHeight="100" d:DesignWidth="500">
     <Grid>
        
         <materialDesign:TransitioningContent x:Name="TransitioningLeftSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromTop, Duration=0:0:0}">
             <Grid Background="WhiteSmoke" >
-                <Border BorderBrush="Blue" BorderThickness=".5" />
+                <StackPanel Orientation="Horizontal">
 
-                <StackPanel Orientation="Horizontal" Margin="0 1 0 1">
-
-                    <Grid HorizontalAlignment="Left">
-                        <TextBlock Text="ugfghfjhgfhg" />
+                    <Grid Width="100">
+                        <materialDesign:PackIcon Kind="ContentCut"  Width="20" Height="20" Margin="70 5 0 0"/>
+                        <materialDesign:PackIcon Kind="ContentCopy" Width="20" Height="20" Margin="70 30 0 0"/>
+                        <materialDesign:PackIcon Kind="ContentPaste" Width="40" Height="40" Margin="5 5 0 0" />
+                        <TextBlock Text="Clipboard" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 0 0 3" />
+                    </Grid>
+                    <Grid>
+                        <TextBlock Text="Clipboard" />
+                    </Grid>
+                    <Grid>
+                        <TextBlock Text="Clipboard" />
+                    </Grid>
+                    <Grid>
+                        <TextBlock Text="Clipboard" />
                     </Grid>
                 </StackPanel>
             </Grid>
