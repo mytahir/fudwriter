@@ -23,47 +23,52 @@ namespace fudwriter
 
         }
 
-        private void FileTab_Click(object sender, RoutedEventArgs e)
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            int index = int.Parse(((MenuItem)e.Source).Uid);
-
-            switch (index)
-            {
-                case 0:
-                    if (StateOpen)
-                    {
-                        Container.Children.Clear();
-                        Container.Children.Add(new LeftMenu());
-                    }
-                    else
-                    {
-                        Container.Children.Clear();
-                    }
-                    StateOpen = !StateOpen;
-                    break;
-                case 1:
-
-                    if (StateOpen)
-                    {
-                        Container.Children.Clear();
-                        home.Background = new SolidColorBrush(Colors.LightGray);
-                        Container2.Children.Add(new UpperMenu());
-                    }
-                    else
-                    {
-                        Container2.Children.Clear();
-                        home.Background = new SolidColorBrush(Colors.WhiteSmoke);
-                    }
-                    StateOpen = !StateOpen;
-                    break;
-
-                default:
-                    Container.Children.Clear();
-                    Container2.Children.Clear();
-                    break;
-            }
 
         }
+
+        //private void FileTab_Click(object sender, RoutedEventArgs e)
+        //{
+        //    int index = int.Parse(((MenuItem)e.Source).Uid);
+
+        //    switch (index)
+        //    {
+        //        case 0:
+        //            if (StateOpen)
+        //            {
+        //                Container.Children.Clear();
+        //                Container.Children.Add(new LeftMenu());
+        //            }
+        //            else
+        //            {
+        //                Container.Children.Clear();
+        //            }
+        //            StateOpen = !StateOpen;
+        //            break;
+        //        case 1:
+
+        //            if (StateOpen)
+        //            {
+        //                Container.Children.Clear();
+        //                home.Background = new SolidColorBrush(Colors.LightGray);
+        //                Container2.Children.Add(new UpperMenu());
+        //            }
+        //            else
+        //            {
+        //                Container2.Children.Clear();
+        //                home.Background = new SolidColorBrush(Colors.WhiteSmoke);
+        //            }
+        //            StateOpen = !StateOpen;
+        //            break;
+
+        //        default:
+        //            Container.Children.Clear();
+        //            Container2.Children.Clear();
+        //            break;
+        //    }
+
+        //}
     }
 
 }
