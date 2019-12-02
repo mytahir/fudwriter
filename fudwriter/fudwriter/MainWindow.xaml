@@ -6,6 +6,7 @@
         xmlns:fudwriter="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Ribbon"
         xmlns:local="clr-namespace:fudwriter"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:Fluent="urn:fluent-ribbon"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
@@ -29,7 +30,9 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*" />
+           
+          
+
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -39,87 +42,66 @@
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-        
-        <!--<TabControl Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6" Margin="10" BorderThickness="0" Background="LightGray" x:Name="tabC">
-            <TabControl.Resources>
-                <Style TargetType="TabItem">
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="TabItem">
-                                <Grid Name="Panel">
-                                    <ContentPresenter x:Name="ContentSite"
-                                        VerticalAlignment="Center"
-                                        HorizontalAlignment="Center"
-                                        ContentSource="Header"
-                                        Margin="10,2"/>
-                                </Grid>
-                                
-                                <ControlTemplate.Triggers>
-                                    <Trigger Property="IsSelected" Value="True">
-                                        <Setter TargetName="Panel" Property="Background" Value="LightGray" />
-                                    </Trigger>
-                                    <Trigger Property="IsSelected" Value="False">
-                                        <Setter TargetName="Panel" Property="Background" Value="LightBlue" />
-                                    </Trigger>
-                                </ControlTemplate.Triggers>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                </Style>
-            </TabControl.Resources>
 
-            <TabItem Header="General" x:Name="tabI">
-                <Label Content="Content goes here..." />
-            </TabItem>
-            <TabItem Header="Security" />
-            <TabItem Header="Details" />
-        </TabControl>-->
 
-        <!--<materialDesign:ColorZone materialDesign:ShadowAssist.ShadowDepth="Depth1" Grid.Column="0" Grid.ColumnSpan="6" Padding="0 -10 0 -10">
+        <Fluent:Ribbon Grid.Row="0" Grid.ColumnSpan="5">
+            
+            <!--Quick Access Toolbar Items (But doesn't work)-->
+            <Fluent:Ribbon.QuickAccessItems>
+                <!--Use Content or Target Property to set QAT item-->
+                <Fluent:QuickAccessMenuItem IsChecked="true">
+                    <Fluent:Button Header="Pink" Icon="Images/Copy_48px.png" />
+                </Fluent:QuickAccessMenuItem>
+            </Fluent:Ribbon.QuickAccessItems>
 
-            <Menu Background="WhiteSmoke">
-                <MenuItem
-                    Uid="0" Click="FileTab_Click"
-                    Header="_File" Background="Blue" Foreground="White">
-                </MenuItem>
-                <MenuItem x:Name="home" Uid="1" Click="FileTab_Click" 
-                          Header="_Home">
-                </MenuItem>
+            <!--StartScreen-->
+            <Fluent:Ribbon.StartScreen>
+                <Fluent:StartScreen IsOpen="True">
+                    <Fluent:StartScreenTabControl>
+                        <Fluent:StartScreenTabControl.LeftContent>
+                            <StackPanel Orientation="Vertical">
+                                <Label Content="StartScreen"
+                            FontSize="48"
+                            Foreground="{DynamicResource Fluent.Ribbon.Brushes.IdealForegroundColorBrush}" />
+                            </StackPanel>
+                        </Fluent:StartScreenTabControl.LeftContent>
 
-                <MenuItem Header="_Tools" Uid="2" Click="FileTab_Click">
+                        <Fluent:StartScreenTabControl.RightContent>
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock VerticalAlignment="Center"
+                                HorizontalAlignment="Center">You can close the start screen by either clicking the button below or by pressing ESC</TextBlock>
+                                <Fluent:Button HorizontalAlignment="Center"
+                                   IsDefinitive="True">Close start screen</Fluent:Button>
+                            </StackPanel>
+                        </Fluent:StartScreenTabControl.RightContent>
+                    </Fluent:StartScreenTabControl>
+                </Fluent:StartScreen>
 
-                </MenuItem>
+            </Fluent:Ribbon.StartScreen>
+            <!--Backstage-->
+            <Fluent:Ribbon.Menu>
+                <Fluent:Backstage>
+                    <Fluent:BackstageTabControl>
+                    <Fluent:BackstageTabItem Header="New" />
+                    <Fluent:BackstageTabItem Header="Print" />
+                    <Fluent:Button Header="Blue" />
+                </Fluent:BackstageTabControl>
+                </Fluent:Backstage>
+            </Fluent:Ribbon.Menu>
 
-                <MenuItem Header="_Help">
-                    <MenuItem Header="About fudwriter">
+            <!--Tabs-->
+            <Fluent:RibbonTabItem Header="Home">
+                <Fluent:RibbonGroupBox Header="Group">
+                    <Fluent:Button Header="Green"
+                           Icon="Images/Copy_48px.png"
+                           LargeIcon="Images/Copy_48px.png" />
+                    <Fluent:Button Header="Grey" 
+                           Icon="Images/Copy_48px.png"
+                           LargeIcon="Images/Copy_48px.png" />
+                </Fluent:RibbonGroupBox>
+            </Fluent:RibbonTabItem>
+        </Fluent:Ribbon>
 
-                    </MenuItem>
-                </MenuItem>
-
-            </Menu>
-
-        </materialDesign:ColorZone>-->
-        <Ribbon Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6" x:Name="RibbonWin"  SelectedIndex="0">
-            <Ribbon.HelpPaneContent>
-                <RibbonButton SmallImageSource="Images\Help_48px.png" />
-            </Ribbon.HelpPaneContent>
-
-            <!-- Quick Access Toolbar - located at the upper-left corner -->
-            <Ribbon.QuickAccessToolBar>
-                <RibbonQuickAccessToolBar>
-                    <RibbonButton x:Name ="Save" SmallImageSource="Images\Save_48px.png" />
-                    <RibbonSplitButton x:Name ="Undo" SmallImageSource="Images\Undo_48px.png" >
-                        <RibbonSplitMenuItem Header="Undo 1" />
-                        <RibbonSplitMenuItem Header="Undo 2" />
-                        <RibbonSplitMenuItem Header="Undo 3" />
-                    </RibbonSplitButton>
-                    <RibbonSplitButton x:Name="Redo" SmallImageSource="Images\Redo_48px.png" >
-                        <RibbonSplitMenuItem Header="Redo 1" />
-                        <RibbonSplitMenuItem Header="Redo 2" />
-                    </RibbonSplitButton>
-                </RibbonQuickAccessToolBar>
-            </Ribbon.QuickAccessToolBar>
-        </Ribbon>
         <Grid  x:Name="Container2" Grid.Column="0" Grid.Row="0" Grid.RowSpan="1" Grid.ColumnSpan="6" Margin="0 30 0 20"/>
         <Grid  x:Name="Container" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Grid.ColumnSpan="3" Margin="0 28 0 0"/>
         <Grid Grid.Row="4" Grid.ColumnSpan="6" Height="30" VerticalAlignment="Bottom" Background="LimeGreen">
