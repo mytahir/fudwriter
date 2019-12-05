@@ -161,11 +161,20 @@
     <Resource Include="Images\Paste_48px.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Copy_48px.png" />
     <Resource Include="Images\Cut_48px.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Menu_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\File_48px.png" />
+    <Resource Include="Images\Open_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Print_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Copy_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
