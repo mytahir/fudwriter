@@ -22,14 +22,14 @@
 
 
 
-    <Grid Background="LightBlue">
+    <Grid>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition  Width="*" />
+            <ColumnDefinition  Width="*" />
+            <ColumnDefinition  Width="*" />
+            <ColumnDefinition  Width="*" />
+            <ColumnDefinition  Width="*"/>
 
 
 
@@ -107,7 +107,7 @@
                            SizeDefinition="Middle, Small, Small" Margin="0 0 10 0"/>
                 </Fluent:RibbonGroupBox>
             </Fluent:RibbonTabItem>
-            
+
             <Fluent:RibbonTabItem Header="View" 
             ReduceOrder="Default,Default,Default,
             Large,Large,Large,
@@ -125,12 +125,22 @@
                 </Fluent:RibbonGroupBox>
             </Fluent:RibbonTabItem>
         </Fluent:Ribbon>
+        
 
-        <InkCanvas ResizeEnabled="True" Grid.Column="0" Grid.Row="1" Grid.RowSpan="4" MoveEnabled="False">
+        <materialDesign:Card Grid.Column="0" Grid.Row="1" Grid.RowSpan="4"
+                             materialDesign:ShadowAssist.ShadowDepth="Depth5"
+                             MaxWidth="1000">
             
-        </InkCanvas>
+        <InkCanvas ResizeEnabled="True" />
+        </materialDesign:Card>
 
-        <materialDesign:Card
+        <GridSplitter   
+                      VerticalAlignment="Stretch" 
+                      Grid.Column="0" Grid.Row="1" Grid.RowSpan="4"   
+                      Width="3" Background="White">
+        </GridSplitter>
+
+       <materialDesign:Card
   Background="DarkBlue"
   Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
   Padding="8" Grid.Row="4" Grid.ColumnSpan="5" Height="40" 
