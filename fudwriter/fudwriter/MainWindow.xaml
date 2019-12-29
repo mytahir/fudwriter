@@ -20,140 +20,189 @@
         WindowStartupLocation="CenterScreen"
         Loaded="Window_Loaded">
 
+    <Window.Resources>
 
+        <Style TargetType="ScrollBar">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ScrollBar">
+                        <Grid Name="Bg"
+              Background="{TemplateBinding Background}"
+              SnapsToDevicePixels="true">
+                            <Grid.RowDefinitions>
+                                <RowDefinition MaxHeight="{DynamicResource 
+            {x:Static SystemParameters.VerticalScrollBarButtonHeightKey}}"/>
+                                <RowDefinition Height="0.00001*"/>
+                                <RowDefinition MaxHeight="{DynamicResource 
+            {x:Static SystemParameters.VerticalScrollBarButtonHeightKey}}"/>
+                            </Grid.RowDefinitions>
 
-    <Grid>
+                            <Track Name="PART_Track" 
+               IsDirectionReversed="true"
+               Grid.Row="1"
+               Grid.ZIndex="-1">
+                                <Track.Resources>
+                                    <!-- Set the Thumb's minimum height to 50.
+            The Thumb's minimum height is half the
+            value of VerticalScrollBarButtonHeightKey. -->
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition  Width="*" />
-            <ColumnDefinition  Width="*" />
-            <ColumnDefinition  Width="*" />
-            <ColumnDefinition  Width="*" />
-            <ColumnDefinition  Width="*"/>
+                                </Track.Resources>
 
+                                <Track.Thumb>
+                                    <Thumb/>
+                                </Track.Thumb>
+                            </Track>
 
-
-        </Grid.ColumnDefinitions>
-
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-        </Grid.RowDefinitions>
-
-
-        <Fluent:Ribbon Grid.Row="0" Grid.ColumnSpan="5">
-
-            <!--Quick Access Toolbar Items-->
-            <Fluent:Ribbon.QuickAccessItems>
-                <!--Use Content or Target Property to set QAT item-->
-                <Fluent:QuickAccessMenuItem IsChecked="False">
-                    <Fluent:Button Header="New" Icon="Images\File_48px.png" />
-                </Fluent:QuickAccessMenuItem>
-                <Fluent:QuickAccessMenuItem IsChecked="False">
-                    <Fluent:Button Header="Open" Icon="Images\Open_50px.png" />
-                </Fluent:QuickAccessMenuItem>
-                <Fluent:QuickAccessMenuItem IsChecked="True">
-                    <Fluent:Button Header="Save" Icon="Images\Save_48px.png" />
-                </Fluent:QuickAccessMenuItem>
-                <Fluent:QuickAccessMenuItem IsChecked="False">
-                    <Fluent:Button Header="Print" Icon="Images\Print_48px.png" />
-                </Fluent:QuickAccessMenuItem>
-                <Fluent:QuickAccessMenuItem IsChecked="True">
-                    <Fluent:Button Header="Undo" Icon="Images\Undo_48px.png" />
-                </Fluent:QuickAccessMenuItem>
-                <Fluent:QuickAccessMenuItem IsChecked="True">
-                    <Fluent:Button Header="Redo" Icon="Images\Redo_48px.png" />
-                </Fluent:QuickAccessMenuItem>
-            </Fluent:Ribbon.QuickAccessItems>
-
-            <!--Backstage-->
-            <Fluent:Ribbon.Menu>
-                <Fluent:Backstage>
-                    <Fluent:BackstageTabControl>
-                        <Fluent:BackstageTabItem Header="New" />
-                        <Fluent:BackstageTabItem Header="Print" />
-                        <Fluent:Button Header="Blue" />
-                    </Fluent:BackstageTabControl>
-                </Fluent:Backstage>
-            </Fluent:Ribbon.Menu>
-
-            <!--Tabs-->
-            <Fluent:RibbonTabItem Header="Home" 
-            ReduceOrder="Default,Default,Default,
-            Large,Large,Large,
-            Other,Other,Other"
-            >
-                <Fluent:RibbonGroupBox Header="Clipboard">
-                    <Fluent:Button Header="Paste"
-                           LargeIcon="Images/Paste_48px.png" SizeDefinition="Large, Large, Large"/>
-                    <Fluent:Button Header="Cut" 
-                           Icon="Images/Cut_48px.png"
-                           SizeDefinition="Middle, Small, Small" Margin="0 0 10 0"/>
-                    <Fluent:Button Header="Copy" 
-                           Icon="Images/Copy_48px.png"
-                           SizeDefinition="Middle, Small, Small" Margin="0 0 10 0"/>
-                </Fluent:RibbonGroupBox>
-                <Fluent:RibbonGroupBox Header="Clipboard">
-                    <Fluent:Button Header="Paste"
-                           LargeIcon="Images/Paste_48px.png" SizeDefinition="Large, Large, Large"/>
-                    <Fluent:Button Header="Cut" 
-                           Icon="Images/Cut_48px.png"
-                           SizeDefinition="Middle, Small, Small" Margin="0 0 10 0"/>
-                    <Fluent:Button Header="Copy" 
-                           Icon="Images/Copy_48px.png"
-                           SizeDefinition="Middle, Small, Small" Margin="0 0 10 0"/>
-                </Fluent:RibbonGroupBox>
-            </Fluent:RibbonTabItem>
-
-            <Fluent:RibbonTabItem Header="View" 
-            ReduceOrder="Default,Default,Default,
-            Large,Large,Large,
-            Other,Other,Other"
-            >
-                <Fluent:RibbonGroupBox Header="Clipboard">
-                    <Fluent:Button Header="Paste"
-                           LargeIcon="Images/Paste_48px.png" SizeDefinition="Large, Large, Large"/>
-                    <Fluent:Button Header="Cut" 
-                           Icon="Images/Cut_48px.png"
-                           SizeDefinition="Middle, Small, Small" Margin="0 0 10 0"/>
-                    <Fluent:Button Header="Copy" 
-                           Icon="Images/Copy_48px.png"
-                           SizeDefinition="Middle, Small, Small" Margin="0 0 10 0"/>
-                </Fluent:RibbonGroupBox>
-            </Fluent:RibbonTabItem>
-        </Fluent:Ribbon>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger SourceName="PART_Track" 
+                   Property="IsEnabled" Value="false">
+                                <Setter TargetName="PART_Track" 
+                    Property="Visibility" Value="Hidden"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
         
+    </Window.Resources>
 
-        <materialDesign:Card Grid.Column="0" Grid.Row="1" Grid.RowSpan="4"
-                             materialDesign:ShadowAssist.ShadowDepth="Depth5"
-                             MaxWidth="1000">
+
+    <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto">
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+
+
+
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+
+            <Fluent:Ribbon Grid.Row="0" Grid.ColumnSpan="7">
+
+                <!--Quick Access Toolbar Items-->
+                <Fluent:Ribbon.QuickAccessItems>
+                    <!--Use Content or Target Property to set QAT item-->
+                    <Fluent:QuickAccessMenuItem IsChecked="False">
+                        <Fluent:Button Header="New" Icon="Images\File_48px.png" />
+                    </Fluent:QuickAccessMenuItem>
+                    <Fluent:QuickAccessMenuItem IsChecked="False">
+                        <Fluent:Button Header="Open" Icon="Images\Open_50px.png" />
+                    </Fluent:QuickAccessMenuItem>
+                    <Fluent:QuickAccessMenuItem IsChecked="True">
+                        <Fluent:Button Header="Save" Icon="Images\Save_48px.png" />
+                    </Fluent:QuickAccessMenuItem>
+                    <Fluent:QuickAccessMenuItem IsChecked="False">
+                        <Fluent:Button Header="Print" Icon="Images\Print_48px.png" />
+                    </Fluent:QuickAccessMenuItem>
+                    <Fluent:QuickAccessMenuItem IsChecked="True">
+                        <Fluent:Button Header="Undo" Icon="Images\Undo_48px.png" />
+                    </Fluent:QuickAccessMenuItem>
+                    <Fluent:QuickAccessMenuItem IsChecked="True">
+                        <Fluent:Button Header="Redo" Icon="Images\Redo_48px.png" />
+                    </Fluent:QuickAccessMenuItem>
+                </Fluent:Ribbon.QuickAccessItems>
+
+                <!--Backstage-->
+                <Fluent:Ribbon.Menu>
+                    <Fluent:Backstage>
+                        <Fluent:BackstageTabControl>
+                            <Fluent:BackstageTabItem Header="New" />
+                            <Fluent:BackstageTabItem Header="Print" />
+                            <Fluent:Button Header="Blue" />
+                        </Fluent:BackstageTabControl>
+                    </Fluent:Backstage>
+                </Fluent:Ribbon.Menu>
+
+                <!--Tabs-->
+                <Fluent:RibbonTabItem Header="Home" 
+            ReduceOrder="Default,Default,Default,
+            Large,Large,Large,
+            Other,Other,Other"
+            >
+                    <Fluent:RibbonGroupBox Header="Clipboard">
+                        <Fluent:Button Header="Paste"
+                           LargeIcon="Images/Paste_48px.png" SizeDefinition="Large, Large, Large"/>
+                        <Fluent:Button Header="Cut" 
+                           Icon="Images/Cut_48px.png"
+                           SizeDefinition="Middle, Small, Small" Margin="0 0 10 0"/>
+                        <Fluent:Button Header="Copy" 
+                           Icon="Images/Copy_48px.png"
+                           SizeDefinition="Middle, Small, Small" Margin="0 0 10 0"/>
+                    </Fluent:RibbonGroupBox>
+                    <Fluent:RibbonGroupBox Header="Clipboard">
+                        <Fluent:Button Header="Paste"
+                           LargeIcon="Images/Paste_48px.png" SizeDefinition="Large, Large, Large"/>
+                        <Fluent:Button Header="Cut" 
+                           Icon="Images/Cut_48px.png"
+                           SizeDefinition="Middle, Small, Small" Margin="0 0 10 0"/>
+                        <Fluent:Button Header="Copy" 
+                           Icon="Images/Copy_48px.png"
+                           SizeDefinition="Middle, Small, Small" Margin="0 0 10 0"/>
+                    </Fluent:RibbonGroupBox>
+                </Fluent:RibbonTabItem>
+
+                <Fluent:RibbonTabItem Header="View" 
+            ReduceOrder="Default,Default,Default,
+            Large,Large,Large,
+            Other,Other,Other"
+            >
+                    <Fluent:RibbonGroupBox Header="Clipboard">
+                        <Fluent:Button Header="Paste"
+                           LargeIcon="Images/Paste_48px.png" SizeDefinition="Large, Large, Large"/>
+                        <Fluent:Button Header="Cut" 
+                           Icon="Images/Cut_48px.png"
+                           SizeDefinition="Middle, Small, Small" Margin="0 0 10 0"/>
+                        <Fluent:Button Header="Copy" 
+                           Icon="Images/Copy_48px.png"
+                           SizeDefinition="Middle, Small, Small" Margin="0 0 10 0"/>
+                    </Fluent:RibbonGroupBox>
+                </Fluent:RibbonTabItem>
+            </Fluent:Ribbon>
             
-        <InkCanvas ResizeEnabled="True" />
-        </materialDesign:Card>
+            <Grid Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="5" Grid.RowSpan="5">
 
-        <GridSplitter   
-                      VerticalAlignment="Stretch" 
-                      Grid.Column="0" Grid.Row="1" Grid.RowSpan="4"   
-                      Width="3" Background="White">
-        </GridSplitter>
-
-       <materialDesign:Card
+                <Canvas Background="Yellow" Width="150" Height="150" x:Name="myCanvasStretch">
+                    <Thumb Name="myThumb" MouseMove="myThumb_MouseMove" MouseLeave="myThumb_MouseLeave" Canvas.Left="130" Canvas.Top="130" Background="Blue" 
+      Width="20" Height="20" DragDelta="onDragDelta" 
+      DragStarted="onDragStarted" DragCompleted="onDragCompleted"
+      />
+                </Canvas>
+                
+            </Grid>
+            
+            <materialDesign:Card
   Background="DarkBlue"
   Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
-  Padding="8" Grid.Row="4" Grid.ColumnSpan="5" Height="40" 
+  Padding="8" Grid.Row="7" Grid.ColumnSpan="7" Height="40" 
   VerticalAlignment="Bottom">
-            <StackPanel>
-                <TextBlock
+                <StackPanel>
+                    <TextBlock
       FontSize="16">
     Pens:
-                </TextBlock>
+                    </TextBlock>
 
-            </StackPanel>
-        </materialDesign:Card>
+                </StackPanel>
+            </materialDesign:Card>
 
-    </Grid>
-
+        </Grid>
+    </ScrollViewer>
 </Fluent:RibbonWindow>
