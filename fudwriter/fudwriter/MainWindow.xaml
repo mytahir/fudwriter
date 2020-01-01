@@ -27,7 +27,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="ScrollBar">
                         <Grid Name="Bg"
-              Background="{TemplateBinding Background}"
+              Background="White"
               SnapsToDevicePixels="true">
                             <Grid.RowDefinitions>
                                 <RowDefinition MaxHeight="{DynamicResource 
@@ -177,18 +177,23 @@
                     </Fluent:RibbonGroupBox>
                 </Fluent:RibbonTabItem>
             </Fluent:Ribbon>
-            
-            <Grid Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="5" Grid.RowSpan="5">
 
-                <Canvas Background="Yellow" Width="150" Height="150" x:Name="myCanvasStretch">
-                    <Thumb Name="myThumb" MouseMove="myThumb_MouseMove" MouseLeave="myThumb_MouseLeave" Canvas.Left="130" Canvas.Top="130" Background="Blue" 
-      Width="20" Height="20" DragDelta="onDragDelta" 
+            <Grid x:Name="canvasContainer" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="7" Grid.RowSpan="4" Margin="0 0 20 0">
+                    <Canvas VerticalAlignment="Top" HorizontalAlignment="Left"  Background="Yellow" Width="500" Height="300" x:Name="myCanvasStretch">
+                    <Border Background="Black">
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="4" ShadowDepth="6" Color="Black" Opacity="0.5" />
+                        </Border.Effect>
+                    </Border>
+                        <Thumb Name="myThumb" MouseMove="myThumb_MouseMove" MouseLeave="myThumb_MouseLeave" Canvas.Left="480" Canvas.Top="280" Background="Blue" 
+      Width="30" Height="30" DragDelta="onDragDelta" 
       DragStarted="onDragStarted" DragCompleted="onDragCompleted"
       />
+                        <InkCanvas x:Name="myInk" Width="500" Height="300" />
+                    
                 </Canvas>
-                
-            </Grid>
-            
+        </Grid>
+
             <materialDesign:Card
   Background="DarkBlue"
   Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"

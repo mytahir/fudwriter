@@ -59,12 +59,15 @@ namespace fudwriter
 
         void onDragStarted(object sender, DragStartedEventArgs e)
         {
-            myThumb.Background = Brushes.Orange;
+            myThumb.Background = Brushes.White;
         }
 
         void onDragCompleted(object sender, DragCompletedEventArgs e)
         {
             myThumb.Background = Brushes.Blue;
+            myInk.Height = myCanvasStretch.Height;
+            myInk.Width = myCanvasStretch.Width;
+            canvasContainer.Margin = new Thickness(0,0,0,20);
         }
         //private void FileTab_Click(object sender, RoutedEventArgs e)
         //{
