@@ -36,6 +36,7 @@
                                                         <Ellipse  HorizontalAlignment="Right" VerticalAlignment="Top"/>
                                                         <Ellipse HorizontalAlignment="Right" VerticalAlignment="Center"/>
                                                         <Ellipse  HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                                                        <Ellipse  HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
                                                     </Grid>
                                                 </Grid>
                                             </ControlTemplate>
