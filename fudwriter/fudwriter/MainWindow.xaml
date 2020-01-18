@@ -17,86 +17,14 @@
         mc:Ignorable="d"
         Title="fudwriter" 
         WindowState="Maximized"
-        WindowStartupLocation="CenterScreen"
-        Loaded="Window_Loaded">
-
-    <Window.Resources>
-
-        <Style TargetType="ScrollBar">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="ScrollBar">
-                        <Grid Name="Bg"
-              Background="White"
-              SnapsToDevicePixels="true">
-                            <Grid.RowDefinitions>
-                                <RowDefinition MaxHeight="{DynamicResource 
-            {x:Static SystemParameters.VerticalScrollBarButtonHeightKey}}"/>
-                                <RowDefinition Height="0.00001*"/>
-                                <RowDefinition MaxHeight="{DynamicResource 
-            {x:Static SystemParameters.VerticalScrollBarButtonHeightKey}}"/>
-                            </Grid.RowDefinitions>
-
-                            <Track Name="PART_Track" 
-               IsDirectionReversed="true"
-               Grid.Row="1"
-               Grid.ZIndex="-1">
-                                <Track.Resources>
-                                    <!-- Set the Thumb's minimum height to 50.
-            The Thumb's minimum height is half the
-            value of VerticalScrollBarButtonHeightKey. -->
-
-                                </Track.Resources>
-
-                                <Track.Thumb>
-                                    <Thumb/>
-                                </Track.Thumb>
-                            </Track>
-
-                        </Grid>
-                        <ControlTemplate.Triggers>
-                            <Trigger SourceName="PART_Track" 
-                   Property="IsEnabled" Value="false">
-                                <Setter TargetName="PART_Track" 
-                    Property="Visibility" Value="Hidden"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        
-    </Window.Resources>
+        WindowStartupLocation="CenterScreen">
 
 
-    <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto">
-        <Grid>
+    <Grid>
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
+        <DockPanel>
 
-
-
-            </Grid.ColumnDefinitions>
-
-            <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-            </Grid.RowDefinitions>
-
-
-            <Fluent:Ribbon Grid.Row="0" Grid.ColumnSpan="7">
+            <Fluent:Ribbon DockPanel.Dock="Top">
 
                 <!--Quick Access Toolbar Items-->
                 <Fluent:Ribbon.QuickAccessItems>
@@ -178,36 +106,17 @@
                 </Fluent:RibbonTabItem>
             </Fluent:Ribbon>
 
-            <Grid x:Name="canvasContainer" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="7" Grid.RowSpan="4" Margin="0 0 20 0">
-                    <Canvas VerticalAlignment="Top" HorizontalAlignment="Left"  Background="Yellow" Width="500" Height="300" x:Name="myCanvasStretch">
-                    <Border Background="Black">
-                        <Border.Effect>
-                            <DropShadowEffect BlurRadius="4" ShadowDepth="6" Color="Black" Opacity="0.5" />
-                        </Border.Effect>
-                    </Border>
-                        <Thumb Name="myThumb" MouseMove="myThumb_MouseMove" MouseLeave="myThumb_MouseLeave" Canvas.Left="480" Canvas.Top="280" Background="Blue" 
-      Width="30" Height="30" DragDelta="onDragDelta" 
-      DragStarted="onDragStarted" DragCompleted="onDragCompleted"
-      />
-                        <InkCanvas x:Name="myInk" Width="500" Height="300" />
-                    
+                <Canvas>
+                    <ContentControl Style="{StaticResource cc}"  Width="183" Height="110"  Canvas.Left="1" Canvas.Top="10">
+                    <ContentControl.Effect>
+                        <DropShadowEffect ShadowDepth="4" Direction="330"
+                                          Color="Black" Opacity="0.5" BlurRadius="4"/>
+                    </ContentControl.Effect>
+                        <InkCanvas />
+                    </ContentControl>
                 </Canvas>
-        </Grid>
+            
+        </DockPanel>
+    </Grid>
 
-            <materialDesign:Card
-  Background="DarkBlue"
-  Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
-  Padding="8" Grid.Row="7" Grid.ColumnSpan="7" Height="40" 
-  VerticalAlignment="Bottom">
-                <StackPanel>
-                    <TextBlock
-      FontSize="16">
-    Pens:
-                    </TextBlock>
-
-                </StackPanel>
-            </materialDesign:Card>
-
-        </Grid>
-    </ScrollViewer>
 </Fluent:RibbonWindow>

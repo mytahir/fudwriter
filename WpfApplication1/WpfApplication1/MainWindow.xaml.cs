@@ -1,27 +1,22 @@
-﻿using System.Windows;
-using Fluent;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
-using System.Windows.Media;
-using System;
 using System.Windows.Documents;
+using System.Windows.Media;
 
-namespace fudwriter
+
+namespace WpfApplication1
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : RibbonWindow
+    public partial class MainWindow : Window
     {
-        //bool StateOpen = true;
-       
         public MainWindow()
         {
             InitializeComponent();
-
         }
-
-       
     }
 
     public class ResizeThumb : Thumb
@@ -71,6 +66,29 @@ namespace fudwriter
             }
 
             e.Handled = true;
+        }
+    }
+
+
+    public class MoveThumb : Thumb
+    {
+        public MoveThumb()
+        {
+            DragDelta += new DragDeltaEventHandler(this.MoveThumb_DragDelta);
+        }
+
+        private void MoveThumb_DragDelta(object sender, DragDeltaEventArgs e)
+        {
+            Control designerItem = this.DataContext as Control;
+
+            if (designerItem != null)
+            {
+                double left = Canvas.GetLeft(designerItem);
+                double top = Canvas.GetTop(designerItem);
+
+                Canvas.SetLeft(designerItem, left + e.HorizontalChange);
+                Canvas.SetTop(designerItem, top + e.VerticalChange);
+            }
         }
     }
 
