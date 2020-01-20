@@ -14,16 +14,24 @@ namespace fudwriter
     public partial class MainWindow : RibbonWindow
     {
         //bool StateOpen = true;
+
+        #region Default Constructure
+
        
+
+        /// <summary>
+        /// Default Constructure
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
 
         }
 
-       
+        #endregion
     }
 
+    #region ResizeThumb Class
     public class ResizeThumb : Thumb
     {
         public ResizeThumb()
@@ -73,6 +81,9 @@ namespace fudwriter
             e.Handled = true;
         }
     }
+    #endregion
+
+    #region SizeAdorner Class
 
     public class SizeAdorner : Adorner
     {
@@ -87,6 +98,7 @@ namespace fudwriter
                 return this.visuals.Count;
             }
         }
+        
 
         public SizeAdorner(ContentControl designerItem)
             : base(designerItem)
@@ -110,5 +122,6 @@ namespace fudwriter
             return arrangeBounds;
         }
     }
+    #endregion
 
 }

@@ -29,7 +29,8 @@
                                                                 <Setter Property="Width" Value="7" />
                                                                 <Setter Property="Height" Value="7" />
                                                                 <Setter Property="Margin" Value="-2" />
-                                                                <Setter Property="Fill" Value="Silver" />
+                                                                <Setter Property="Fill" Value="Black" />
+                                                                <Setter Property="Opacity" Value=".3" />
                                                             </Style>
                                                         </Grid.Resources>
                                                         <Ellipse SnapsToDevicePixels="True" StrokeThickness="1" Margin="1" Stroke="Black"  StrokeDashArray="8 8"/>
